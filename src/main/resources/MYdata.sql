@@ -1,0 +1,64 @@
+-- Inserting sample data into Artist table
+INSERT INTO Artist (name) VALUES ('Linkin Park');
+--('db50ff23-f1b2-4a61-ad30-6bb3cde91e06', 'Linkin Park'),
+--('f1903885-1947-40f2-bae1-93b40957c20b', 'Coldplay'),
+--('02572f02-9b0b-476e-9f57-9c5763caef05', 'Taylor Swift'),
+--('70ff3b68-a9a0-4f4c-9041-e2a21fce4a01', 'Bruno Mars'),
+--('a5f9a49d-e71a-4f26-b6a7-10a0c9ecdf38', 'Adele'),
+--('d91577f0-5b38-468d-aaaa-02dcbb9d0a32', 'Drake'),
+--('1a438c99-67ce-46b4-aae2-6516f994be33', 'Ed Sheeran'),
+--('f1c8f25d-70f4-4972-85d6-6e2ef86e3277', 'Lady Gaga'),
+--('26489d76-e955-4a60-afa4-fd9cca5ccca8', 'Imagine Dragons'),
+--('222a11d5-309c-4d2a-8fbc-8510bb23bc98', 'Maroon 5');
+
+-- Inserting sample data into Album table
+INSERT INTO Album (title, artist_id) VALUES ('Hybrid Theory', 'db50ff23-f1b2-4a61-ad30-6bb3cde91e06');
+--('e6333ca9-6f3c-4166-8c5a-9bf8e25e796d', 'Hybrid Theory', 'db50ff23-f1b2-4a61-ad30-6bb3cde91e06'),
+--('64fb38f4-7f01-4aa2-9d94-90552223cb75', 'A Head Full of Dreams', 'f1903885-1947-40f2-bae1-93b40957c20b'),
+--('1c4a3695-015f-4f44-991b-b4d3b8bbe549', '1989', '02572f02-9b0b-476e-9f57-9c5763caef05'),
+--('cbf78770-65f4-40d5-a53a-ddbb7e2382c4', 'Unorthodox Jukebox', '70ff3b68-a9a0-4f4c-9041-e2a21fce4a01'),
+--('cb612f6d-e1fc-4009-ba55-e679fa94c578', '21', 'a5f9a49d-e71a-4f26-b6a7-10a0c9ecdf38'),
+--('362922c3-661a-40d2-b83d-2a6fc338d878', 'Views', 'd91577f0-5b38-468d-aaaa-02dcbb9d0a32'),
+--('ecb8d27e-8bca-4678-9f12-5b39043b6c82', '÷', '1a438c99-67ce-46b4-aae2-6516f994be33'),
+--('9fa75128-8714-4fa7-81cd-a8cb8191a49b', 'The Fame', 'f1c8f25d-70f4-4972-85d6-6e2ef86e3277'),
+--('c0f0c7f4-65ac-4e8d-b2cd-310e63775a67', 'Night Visions', '26489d76-e955-4a60-afa4-fd9cca5ccca8'),
+--('f40d0d35-745b-4aa8-a139-c80555098030', 'Red Pill Blues', '222a11d5-309c-4d2a-8fbc-8510bb23bc98');
+
+---- Inserting sample data into Track table
+--INSERT INTO Track (track_id, title, album_id, duration, release_date, description, image_url) VALUES
+--('e8197f22-d5a8-4400-8e25-63af1ea24190', 'In the End', 'e6333ca9-6f3c-4166-8c5a-9bf8e25e796d', 208, '2001-10-09', 'A powerful song about the pain of losing someone, Linkin Park''s "In the End" is a hauntingly beautiful masterpiece.', 'https://picsum.photos/200'),
+--('e053c209-020e-459a-b5d4-9ba3b5bc17d0', 'Paradise', '64fb38f4-7f01-4aa2-9d94-90552223cb75', 282, '2015-12-04', 'Coldplay''s "Paradise" is a triumph of sound and lyrics. This uplifting and inspiring track will lift your mood and fill you with hope.', 'https://picsum.photos/200'),
+--('89e7c086-fef0-403f-9807-6146512eda32', 'Shake It Off', '1c4a3695-015f-4f44-991b-b4d3b8bbe549', 219, '2014-08-18', 'Taylor Swift''s "Shake It Off" is a fun, upbeat track that will get you dancing and singing along. With its catchy lyrics and infectious melody, it''s sure to put a smile on your face.', 'https://picsum.photos/200'),
+--('d2ce711f-adcc-455c-9670-f19a267b8f20', 'Grenade', 'cbf78770-65f4-40d5-a53a-ddbb7e2382c4', 223, '2010-12-10', 'Bruno Mars''s "Grenade" is a heartfelt ballad about unrequited love. With its soulful vocals and emotional lyrics, this track is sure to tug at your heartstrings.', 'https://picsum.photos/200'),
+--('dc71d071-fcf4-4d9c-8af8-8251a1b76cb4', 'Rolling in the Deep', 'cb612f6d-e1fc-4009-ba55-e679fa94c578', 228, '2010-11-29', 'Adele''s "Rolling in the Deep" is a soulful and powerful track that showcases her incredible vocals. With its driving beat and haunting melody, this song will stay with you long after it''s over.', 'https://picsum.photos/200'),
+--('2049b198-80d4-4cc2-b436-260f5e48f06e', 'One Dance', '362922c3-661a-40d2-b83d-2a6fc338d878', 173, '2016-04-05', 'Drake''s "One Dance" is a smooth and sexy track that will get you moving. With its infectious beat and seductive lyrics, this song is perfect for a night out on the town.', 'https://picsum.photos/200'),
+--('3becea5c-cd0a-4c3f-a33a-f4b959f732aa', 'Shape of You', 'ecb8d27e-8bca-4678-9f12-5b39043b6c82', 233, '2017-01-06', 'Ed Sheeran''s "Shape of You" is a catchy and upbeat track that will have you singing along in no time. With its fun lyrics and energetic melody, this song is perfect for a summer road trip.', 'https://picsum.photos/200'),
+--('becc5711-68f4-4381-be2c-6c498535ce5b', 'Poker Face', '9fa75128-8714-4fa7-81cd-a8cb8191a49b', 214, '2008-08-19', 'Lady Gaga''s "Poker Face" is a pop classic that will never go out of style. With its infectious beat and playful lyrics, this song is perfect for a night out with friends.', 'https://picsum.photos/200'),
+--('9ccce0b2-bbaa-4224-b53b-d4135af4635f', 'Radioactive', 'c0f0c7f4-65ac-4e8d-b2cd-310e63775a67', 187, '2012-02-14', 'Imagine Dragons'' "Radioactive" is a dark and powerful track that showcases the band''s incredible sound. With its haunting melody and intense lyrics, this song is sure to leave an impression.', 'https://picsum.photos/200'),
+--('f0ea7e1f-ee57-4e1f-b498-2d1f08452cbd', 'Girls Like You', 'f40d0d35-745b-4aa8-a139-c80555098030', 235, '2018-05-30', 'Maroon 5''s "Girls Like You" is a catchy and upbeat track that celebrates the power and beauty of women. With its fun lyrics and energetic melody, this song is perfect for any occasion.', 'https://picsum.photos/200');
+--
+---- Inserting sample data into Genre table
+--INSERT INTO Genre (genre_id, name) VALUES
+--('56d61217-6bc8-42d5-8500-1172ebb63d64', 'Rock'),
+--('6c2f6e81-4861-451d-8143-8944dfaa77ba', 'Pop'),
+--('d0987574-b2d4-45b5-96aa-cca1186ec632', 'Hip hop'),
+--('5810c154-2e7f-43f7-958b-b870c25a806e', 'Electronic'),
+--('6ac0548e-14b6-4cb4-85e3-550a03e3f14b', 'Country'),
+--('d91cf000-772c-4fd7-ab32-96e5d399f465', 'Folk'),
+--('2da03ed8-4ad8-44f3-9a22-96890f8ce550', 'Jazz'),
+--('abfdf925-d2fc-4d77-8bb6-033bf698b813', 'Blues'),
+--('411ed19b-81cd-47c4-9e18-b704fc9ba727', 'Reggae'),
+--('d8cf67ce-ef71-402b-b3c4-34986a640ff4', 'Classical');
+--
+----Inserting sample data into Track_Genre table
+--INSERT INTO Track_Genre (track_id, genre_id) VALUES
+--('e8197f22-d5a8-4400-8e25-63af1ea24190', '56d61217-6bc8-42d5-8500-1172ebb63d64'),
+--('e053c209-020e-459a-b5d4-9ba3b5bc17d0', '56d61217-6bc8-42d5-8500-1172ebb63d64'),
+--('89e7c086-fef0-403f-9807-6146512eda32', '6c2f6e81-4861-451d-8143-8944dfaa77ba'),
+--('d2ce711f-adcc-455c-9670-f19a267b8f20', 'd0987574-b2d4-45b5-96aa-cca1186ec632'),
+--('dc71d071-fcf4-4d9c-8af8-8251a1b76cb4', '5810c154-2e7f-43f7-958b-b870c25a806e'),
+--('2049b198-80d4-4cc2-b436-260f5e48f06e', 'd0987574-b2d4-45b5-96aa-cca1186ec632'),
+--('3becea5c-cd0a-4c3f-a33a-f4b959f732aa', '6c2f6e81-4861-451d-8143-8944dfaa77ba'),
+--('becc5711-68f4-4381-be2c-6c498535ce5b', '5810c154-2e7f-43f7-958b-b870c25a806e'),
+--('9ccce0b2-bbaa-4224-b53b-d4135af4635f', '56d61217-6bc8-42d5-8500-1172ebb63d64'),
+--('f0ea7e1f-ee57-4e1f-b498-2d1f08452cbd', '6c2f6e81-4861-451d-8143-8944dfaa77ba');

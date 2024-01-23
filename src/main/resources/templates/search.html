@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musicar-Search</title>
+  <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
+  <link rel="stylesheet" type="text/css" href="../public/output-style.css" th:href="@{style.css}" />
+</head>
+<body>
+<div th:replace="~{fragments/navbar}"></div>
+<div>
+  <div th:replace="~{fragments/sidebar}"></div>
+  <div class="p-4 sm:ml-64 bg-white dark:bg-gray-900">
+    <div class="p-4 rounded-lg mt-14">
+      <div class="flex items-center justify-start p-4 h-60 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+        <img class="h-52" th:with="imageSrc=${topquery.get('image').textValue()}" th:src= ${#strings.replace(imageSrc,'50x50','500x500')} alt="Song" >
+        <div class="flex-col flex ml-4 items-start justify-between h-52">
+          <span class="uppercase text-white text-sm" th:text=${topquery.get("type").textValue()} >ALBUM</span>
+          <span class="text-white text-6xl font-semibold text-transform:uppercase" th:text=${#strings.abbreviate(topquery.get("title").textValue(),90)}>Playlist Name</span>
+          <span class="text-white text-sm" th:text=${#strings.abbreviate(topquery.get("description").textValue(),90)}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sequi doloribus ipsum totam reprehenderit</span>
+          <div class="flex items-center justify-between">
+            <div class="bg-green-600 hover:bg-green-500 rounded-full w-36 p-3 transform transition duration-100 hover:scale-110 ml-4 flex justify-center">
+              <span class="text-black font-bold cursor-default">Play</span>
+            </div>
+            <div class="border-2 border-gray-700 hover:border-white rounded-full w-36 p-3 transform transition duration-100 hover:scale-110 ml-4 flex justify-center">
+              <span class="text-white font-bold cursor-default">Like</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div th:each="entity : ${data}">
+        <div th:unless="${entity.getValue().isEmpty()}">
+          <div class="dark:text-white font-semibold text-xl my-4" th:text=${entity.getKey()}>ARTISTS</div>
+          <div class="flex flex-row gap-4 mb-4 justify-start" >
+        <div class="flex flex-col items-center p-4 h-60 rounded bg-gray-50 dark:bg-gray-800 hover:bg-gray-700 group cursor-pointer"  th:each="object : ${entity.getValue()}">
+          <div class="relative">
+            <img class="rounded" th:with="imageSrc=${object.get('image').textValue()}" th:src= ${#strings.replace(imageSrc,'50x50','150x150')}  alt="Song" >
+            <div class="absolute inset-x-3/4 inset-y-3/4 flex justify-center items-center z-10 invisible group-hover:visible transition ease-in-out group-hover:-translate-y-2 item-play-button" th:data-item-id=${object.get("id").textValue()} th:data-item-type=${object.get("type").textValue()}>
+              <div class="bg-green-600 hover:bg-green-500 rounded-full p-3 transform transition duration-100 hover:scale-110">
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="w-6"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+              </div>
+            </div>
+          </div>
+          <div class="mt-2 text-white overflow-hidden" th:with="title=${object.get('title')},name=${object.get('song')},resultStr=${title}?${title.textValue()}:${name.textValue()}" th:text=${#strings.abbreviate(resultStr,15)} >Name of Song</div>
+          <div class="text-xs text-gray-400 hover:underline hover:text-white" th:with="primary_artists=${object.get('primary_artists')},description=${object.get('description')},resultStr=${primary_artists}?${primary_artists.textValue()}:${description.textValue()}" th:text=${#strings.abbreviate(resultStr,25)}>Artist Name</div>
+        </div>
+      </div>
+        </div>
+      </div>
+      <br/>
+      <br/>
+    </div>
+  </div>
+</div>
+<div th:replace="~{fragments/bottombar}"></div>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+
+        const hotAlbum = /*[[${hotAlbum}]]*/ null;
+        const topWeeklySongsModel = /*[[${data}]]*/ [];
+        let topWeeklySongs = null;
+        for (const item of topWeeklySongsModel) {
+          if(item["SONGS"] !== undefined && item["SONGS"].length >= 0){
+            topWeeklySongs = item["SONGS"];
+            break;
+          }
+        }
+        console.log(hotAlbum);
+        console.log(topWeeklySongs);
+
+    /*]]>*/
+</script>
+<script src="index.js" th:src="@{script.js}"></script>
+</body>
+</html>

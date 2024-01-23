@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Led Zeppelin"
+  },
+  {
+    "id": 2,
+    "name": "The Beatles"
+  },
+  {
+    "id": 3,
+    "name": "The Rolling Stones"
+  },
+  {
+    "id": 4,
+    "name": "Nirvana"
+  },
+  {
+    "id": 5,
+    "name": "Metallica"
+  },
+  {
+    "id": 6,
+    "name": "Michael Jackson"
+  }
+]

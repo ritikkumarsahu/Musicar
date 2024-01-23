@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "IV",
+    "artist_id": 1
+  },
+  {
+    "id": 2,
+    "title": "Abbey Road",
+    "artist_id": 2
+  },
+  {
+    "id": 3,
+    "title": "Beggars Banquet",
+    "artist_id": 3
+  },
+  {
+    "id": 4,
+    "title": "Nevermind",
+    "artist_id": 4
+  },
+  {
+    "id": 5,
+    "title": "Master of Puppets",
+    "artist_id": 5
+  },
+  {
+    "id": 6,
+    "title": "Thriller",
+    "artist_id": 6
+  },
+  {
+    "id": 7,
+    "title": "Physical Graffiti",
+    "artist_id": 1
+  },
+  {
+    "id": 8,
+    "title": "Let It Be",
+    "artist_id": 2
+  },
+  {
+    "id": 9,
+    "title": "Exile on Main St.",
+    "artist_id": 3
+  },
+  {
+    "id": 10,
+    "title": "In Utero",
+    "artist_id": 4
+  }
+]
